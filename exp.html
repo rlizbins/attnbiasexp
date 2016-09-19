@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Picture Roulette</title>
+      <body onload = "startTimer();function();">
+      <script type = "text/javascript">
+          var x = 0;
+          var array;
+          function randomNumber(counter, min, max) {
+            min = min < max ? min : max;
+            max = max > min ? max : min;
+            var numArray = [], randNumber;
+            while (counter > 0) {
+                randNumber = Math.round(min + Math.random() * (max - min));
+                if (numArray.indexOf(randNumber) == -1) {
+                    numArray.push(randNumber);
+                    counter--;
+                }
+            }
+            return numArray;
+          }
+
+          array = randomNumber(159,0,159);
+
+          function displayRandomImage() {
+              document.getElementById("img").src = images[array[x]];
+              if (x <159){
+                x=x+1;
+              }
+              else{
+                x=160;
+                stopTimer();
+              }
+          }
+          var myVar;
+          function startTimer() {
+              myVar = setInterval(displayRandomImage, 2000);
+          }
+          function stopTimer(){
+            clearInterval(myVar);
+          }
+
+          var images = [];
+          images[0] = "AAMNN2.bmp";
+          images[1] = "AAMNN3.bmp";
+          images[2] = "AAMNN4.bmp";
+          images[3] = "AAMNN5.bmp";
+          images[4] = "AAMNN6.bmp";
+          images[5] = "AAMNN7.bmp";
+          images[6] = "AAMNN8.bmp";
+          images[7] = "HLF1.bmp";
+          images[8] = "HLF2.bmp";
+          images[9] = "HLF3.bmp";
+          images[10] = "HLF4.bmp";
+          images[11] = "HLF5.bmp";
+          images[12] = "HLF6.bmp";
+          images[13] = "HLF7.bmp";
+          images[14] = "HLF8.bmp";
+          images[15] = "HLFB1.bmp";
+          images[16] = "HLFB2.bmp";
+          images[17] = "HLFB3.bmp";
+          images[18] = "HLFB4.bmp";
+          images[19] = "HLFB5.bmp";
+          images[20] = "HLFB6.bmp";
+          images[21] = "HLFB7.bmp";
+          images[22] = "HLFB8.bmp";
+          images[23] = "HLM1.bmp";
+          images[24] = "HLM2.bmp";
+          images[25] = "HLM3.bmp";
+          images[26] = "HLM4.bmp";
+          images[27] = "HLM5.bmp";
+          images[28] = "HLM6.bmp";
+          images[29] = "HLM7.bmp";
+          images[30] = "HLM8.bmp";
+          images[31] = "HLMB1.bmp";
+          images[32] = "HLMB2.bmp";
+          images[33] = "HLMB3.bmp";
+          images[34] = "HLMB4.bmp";
+          images[35] = "HLMB5.bmp";
+          images[36] = "HLMB6.bmp";
+          images[37] = "HLMB7.bmp";
+          images[38] = "HLMB8.bmp";
+          images[39] = "HRF1.bmp";
+          images[40] = "HRF2.bmp";
+          images[41] = "HRF3.bmp";
+          images[42] = "HRF4.bmp";
+          images[43] = "HRF5.bmp";
+          images[44] = "HRF6.bmp";
+          images[45] = "HRF7.bmp";
+          images[46] = "HRF8.bmp";
+          images[47] = "HRFB1.bmp";
+          images[48] = "HRFB2.bmp";
+          images[49] = "HRFB3.bmp";
+          images[51] = "HRFB4.bmp";
+          images[52] = "HRFB5.bmp";
+          images[53] = "HRFB6.bmp";
+          images[54] = "HRFB7.bmp";
+          images[55] = "HRFB8.bmp";
+          images[56] = "HRM1.bmp";
+          images[57] = "HRM2.bmp";
+          images[58] = "HRM3.bmp";
+          images[59] = "HRM4.bmp";
+          images[60] = "HRM5.bmp";
+          images[61] = "HRM6.bmp";
+          images[62] = "HRM7.bmp";
+          images[63] = "HRM8.bmp";
+          images[64] = "HRMB1.bmp";
+          images[65] = "HRMB2.bmp";
+          images[66] = "HRMB3.bmp";
+          images[67] = "HRMB4.bmp";
+          images[68] = "HRMB5.bmp";
+          images[69] = "HRMB6.bmp";
+          images[70] = "HRMB7.bmp";
+          images[71] = "HRMB8.bmp";
+          images[72] = "NF1.bmp";
+          images[73] = "NF2.bmp";
+          images[74] = "NF3.bmp";
+          images[75] = "NF4.bmp";
+          images[76] = "NF5.bmp";
+          images[77] = "NF6.bmp";
+          images[78] = "NF7.bmp";
+          images[79] = "NF8.bmp";
+          images[80] = "NFB1.bmp";
+          images[81] = "NFB2.bmp";
+          images[82] = "NFB3.bmp";
+          images[83] = "NFB4.bmp";
+          images[84] = "NFB5.bmp";
+          images[85] = "NFB6.bmp";
+          images[86] = "NFB7.bmp";
+          images[87] = "NFB8.bmp";
+          images[88] = "NM1.bmp";
+          images[89] = "NM2.bmp";
+          images[90] = "NM3.bmp";
+          images[91] = "NM4.bmp";
+          images[92] = "NM5.bmp";
+          images[93] = "NM6.bmp";
+          images[94] = "NM7.bmp";
+          images[95] = "NM8.bmp";
+          images[96] = "TLF1.bmp";
+          images[97] = "TLF2.bmp";
+          images[98] = "TLF3.bmp";
+          images[99] = "TLF4.bmp";
+          images[100] = "TLF5.bmp";
+          images[101] = "TLF6.bmp";
+          images[102] = "TLF7.bmp";
+          images[103] = "TLF8.bmp";
+          images[104] = "TLFB1.bmp";
+          images[105] = "TLFB2.bmp";
+          images[106] = "TLFB3.bmp";
+          images[107] = "TLFB4.bmp";
+          images[108] = "TLFB5.bmp";
+          images[109] = "TLFB6.bmp";
+          images[110] = "TLFB7.bmp";
+          images[111] = "TLFB8.bmp";
+          images[112] = "TLM1.bmp";
+          images[113] = "TLM2.bmp";
+          images[114] = "TLM3.bmp";
+          images[115] = "TLM4.bmp";
+          images[116] = "TLM5.bmp";
+          images[117] = "TLM6.bmp";
+          images[118] = "TLM7.bmp";
+          images[119] = "TLM8.bmp";
+          images[120] = "TLMB1.bmp";
+          images[121] = "TLMB2.bmp";
+          images[122] = "TLMB3.bmp";
+          images[123] = "TLMB4.bmp";
+          images[124] = "TLMB5.bmp";
+          images[125] = "TLMB6.bmp";
+          images[126] = "TLMB7.bmp";
+          images[127] = "TLMB8.bmp";
+          images[128] = "TRF1.bmp";
+          images[129] = "TRF2.bmp";
+          images[130] = "TRF3.bmp";
+          images[131] = "TRF4.bmp";
+          images[132] = "TRF5.bmp";
+          images[133] = "TRF6.bmp";
+          images[134] = "TRF7.bmp";
+          images[135] = "TRF8.bmp";
+          images[136] = "TRFB1.bmp";
+          images[137] = "TRFB2.bmp";
+          images[138] = "TRFB3.bmp";
+          images[139] = "TRFB4.bmp";
+          images[140] = "TRFB5.bmp";
+          images[141] = "TRFB6.bmp";
+          images[142] = "TRFB7.bmp";
+          images[143] = "TRFB8.bmp";
+          images[144] = "TRM1.bmp";
+          images[145] = "TRM2.bmp";
+          images[146] = "TRM3.bmp";
+          images[147] = "TRM4.bmp";
+          images[148] = "TRM5.bmp";
+          images[149] = "TRM6.bmp";
+          images[150] = "TRM7.bmp";
+          images[151] = "TRM8.bmp";
+          images[152] = "TRMB1.bmp";
+          images[153] = "TRMB2.bmp";
+          images[154] = "TRMB3.bmp";
+          images[155] = "TRMB4.bmp";
+          images[156] = "TRMB5.bmp";
+          images[157] = "TRMB6.bmp";
+          images[158] = "TRMB7.bmp";
+          images[159] = "TRMB8.bmp";
+          images[160] = "finished.png"
+      </script>
+      <script src="https://webgazer.cs.brown.edu/webgazer.js"></script>
+        <script>
+        window.onload = function() {
+            webgazer.setRegression('ridge') /* currently must set regression and tracker */
+                .setTracker('clmtrackr')
+                .setGazeListener(function(data, clock) {
+                 //   console.log(data); /* data is an object containing an x and y key which are the x and y prediction coordinates (no bounds limiting) */
+                 //   console.log(clock); /* elapsed time in milliseconds since webgazer.begin() was called */
+                })
+                .begin()
+                .showPredictionPoints(true); /* shows a square every 100 milliseconds where current prediction is */
+
+            var width = 320;
+            var height = 240;
+            var topDist = '0px';
+            var leftDist = '0px';
+            
+            var setup = function() {
+                var video = document.getElementById('webgazerVideoFeed');
+                video.style.display = 'block';
+                video.style.position = 'absolute';
+                video.style.top = topDist;
+                video.style.left = leftDist;
+                video.width = width;
+                video.height = height;
+                video.style.margin = '0px';
+
+                webgazer.params.imgWidth = width;
+                webgazer.params.imgHeight = height;
+
+                var overlay = document.createElement('canvas');
+                overlay.id = 'overlay';
+                overlay.style.position = 'absolute';
+                overlay.width = width;
+                overlay.height = height;
+                overlay.style.top = topDist;
+                overlay.style.left = leftDist;
+                overlay.style.margin = '0px';
+
+                document.body.appendChild(overlay);
+
+                var cl = webgazer.getTracker().clm;
+
+                function drawLoop() {
+                    requestAnimFrame(drawLoop);
+                    overlay.getContext('2d').clearRect(0,0,width,height);
+                    if (cl.getCurrentPosition()) {
+                        cl.draw(overlay);
+                    }
+                }
+                drawLoop();
+            };
+
+            function checkIfReady() {
+                if (webgazer.isReady()) {
+                    setup();
+                } else {
+                    setTimeout(checkIfReady, 100);
+                }
+            }
+            setTimeout(checkIfReady,100);
+        };
+
+
+        window.onbeforeunload = function() {
+            //webgazer.end(); //Uncomment if you want to save the data even if you reload the page.
+            window.localStorage.clear(); //Comment out if you want to save data across different sessions 
+        }
+        </script>
+   </head>
+
+   
+      <center><img id="img" src="AAMNN1.bmp" border = "5"></center>
+      <center><a href="home.html">Return to Main Menu</a></center>
+       
+
+       <!-- <div id="txt"></div> -->
+
+   </body>
+  </html>
